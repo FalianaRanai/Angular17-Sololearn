@@ -1,14 +1,32 @@
-.lessonSection{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 80%;
-  border-radius: 20px;
-  margin: auto;
-  background-color: #f2f2f2;
-  padding: 15px;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(40, 42, 53);
   margin-bottom: 35px;
 }
 
-.red{
-  background-color: red;
+.navbar li {
+  float: left;
+  color: white;
+}
+
+.navbar li a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.navbar li .active:hover {
+  background-color: #038052;
 }
