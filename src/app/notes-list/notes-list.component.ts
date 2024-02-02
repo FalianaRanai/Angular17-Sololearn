@@ -8,4 +8,7 @@ import { NOTES } from './note';
 })
 export class NotesListComponent {
   listeNote = NOTES;
+  show(title:String){
+    alert(title)
+  }
 }
