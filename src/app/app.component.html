@@ -1,11 +1,57 @@
+<!-- COMPONENT INTEGRATION -->
+<div class="lessonSection">
+  <h1>Component integration</h1>
+  <hr />
+  <app-header />
+  <p>Root component</p>
+</div>
+<!-- END COMPONENT INTEGRATION -->
 
-<app-header/>
-<p>Root component</p>
-<button (click) = "login()">Login</button>
+<!-- EVENTS -->
+<div class="lessonSection">
+  <h1>Events</h1>
+  <hr />
 
-<p [class.red]="isRed">some text for our page</p>
-<button (click)="change()">
-  Switch Background Color
-</button>
+  <h2>Click welcome</h2>
+  <button (click)="welcome()">Welcome</button>
 
-<app-notes-list/>
+  <h2>Click switch Background Color</h2>
+  <p [class.red]="isRed">some text for our page</p>
+  <button (click)="change()">Switch Background Color</button>
+</div>
+<!-- END EVENTS -->
+
+<!-- @FOR @IF -->
+<div class="lessonSection">
+  <h1>{{ "@for @if" }}</h1>
+  <hr />
+  <app-notes-list />
+</div>
+<!-- END @FOR @IF -->
+
+<!-- FORMS -->
+<div class="lessonSection">
+  <h1>Forms Module</h1>
+  <hr />
+
+  <h2>Type name</h2>
+  <label
+    >Name:
+    <input type="text" [(ngModel)]="name" placeholder="Type something..." />
+  </label>
+  <p>You typed: "{{ name }}"</p>
+
+  <h2>Type username and password</h2>
+  <label for="">Username: </label><br>
+  <input type="text" [(ngModel)]="username"><br><br>
+  <label for="">Password: </label><br>
+  <input type="password" [(ngModel)]="password">
+  <p>Your username is "<b>{{ username }}</b>" and your password is "<b>{{ password }}</b>"</p>
+
+  <h2>Submit</h2>
+  <form (ngSubmit)="showName()">
+    <input type="text" [(ngModel)]="name" name="name" />
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+<!-- END FORMS -->
