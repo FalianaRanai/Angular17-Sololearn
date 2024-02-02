@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { MenuComponent } from './menu/menu.component';
+import { NoteDetailComponent } from './note-detail/note-detail.component';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { NotesComponent } from './notes/notes.component';
 
@@ -19,7 +20,8 @@ import { NotesComponent } from './notes/notes.component';
     NotesListComponent,
     AddNoteComponent,
     LessonsComponent,
-    NotesComponent
+    NotesComponent,
+    NoteDetailComponent
   ],
   imports: [
     BrowserModule,

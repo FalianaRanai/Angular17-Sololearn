@@ -19,10 +19,15 @@ export class AddNoteComponent {
     let title = this.addNoteForm.value.title ?? '';
     let text = this.addNoteForm.value.text ?? '';
     
+    let listeNote = [];
+    let newId:number = 0;
+    if(NOTES.length>0){
+      listeNote = NOTES.sort((a, b) => b.id - a.id);
+      newId = listeNote[0].id; 
+    }
     
-    let listeNote = NOTES.sort((a, b) => b.id - a.id);
-    let newId:number = listeNote[0].id + 1;
     // console.log(newId)
+    newId++;
     let newNote : Note = { id: newId, title: title, text: text };
     NOTES.push(newNote);
   }

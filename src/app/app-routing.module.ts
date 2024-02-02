@@ -5,6 +5,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NoteDetailComponent } from './note-detail/note-detail.component';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { NotesComponent } from './notes/notes.component';
 
@@ -29,7 +30,8 @@ const routes: Routes = [
     children: [
       { path: '', title: 'Liste Note', component: NotesComponent },
       { path: 'listeNote', title: 'Liste Note', component: NotesListComponent },
-      { path: 'addNote', title: "Add Note", component: AddNoteComponent}
+      { path: 'addNote', title: "Add Note", component: AddNoteComponent},
+      { path: "note/:id", title: "Note Detail", component: NoteDetailComponent }
     ],
   },
   { path: '**', title: 'Page not found', component: NotFoundComponent },
