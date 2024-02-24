@@ -1,0 +1,132 @@
+<!-- FORMS -->
+<div class="container pb-5">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5 class="card-title">Forms Module</h5>
+    </div>
+    <div class="card-body">
+      <div class="py-2">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Type name</h5>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="inputPassword5" class="form-label">Name:</label>
+              <input
+                type="text"
+                id="inputPassword5"
+                class="form-control"
+                [(ngModel)]="name"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <p>You typed: "{{ name }}"</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-2">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Type username and password</h5>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="inputPassword5" class="form-label">Username:</label>
+              <input
+                type="text"
+                [(ngModel)]="username"
+                id="inputPassword5"
+                class="form-control"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="inputPassword5" class="form-label">Password:</label>
+              <input
+                type="password"
+                id="inputPassword5"
+                class="form-control"
+                [(ngModel)]="password"
+                aria-describedby="passwordHelpBlock"
+              />
+            </div>
+            <p>
+              Your username is "<b>{{ username }}</b
+              >" and your password is "<b>{{ password }}</b
+              >"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-2">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Submit</h5>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="showName()">
+              <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Name:</label>
+                <input
+                  type="text"
+                  id="inputPassword5"
+                  class="form-control"
+                  [(ngModel)]="submitName"
+                  name="submitName"
+                  aria-describedby="passwordHelpBlock"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-2">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Form validation</h5>
+          </div>
+          <div class="card-body">
+            <form
+              class="form-group"
+              (ngSubmit)="showNameFormValidation()"
+              #myForm="ngForm"
+            >
+              <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Name:</label>
+                <input
+                  type="text"
+                  id="inputPassword5"
+                  class="form-control"
+                  [(ngModel)]="submitFormValidation"
+                  name="submitFormValidation"
+                  aria-describedby="passwordHelpBlock"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="!myForm.form.valid"
+              >
+                Submit
+              </button>
+              <p>
+                The input's valid state is:
+                <b>{{ myForm.form.valid }}</b> because input is <b>required</b>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END FORMS -->

@@ -1,0 +1,36 @@
+<app-setup></app-setup>
+
+<app-component-integration></app-component-integration>
+
+<app-events></app-events>
+
+<app-for-if></app-for-if>
+
+<app-forms-module></app-forms-module>
+
+<app-reactive-form-module></app-reactive-form-module>
+
+<!-- ADD NOTE FORM -->
+<div class="lessonSection">
+  <h1>Add note form</h1>
+  <hr />
+  <app-add-note></app-add-note>
+  <app-notes-list />
+</div>
+<!-- END ADD NOTE FORM -->
+
+<!-- ROUTING -->
+<div class="lessonSection">
+  <h1>Routing</h1>
+  <hr />
+  <a routerLink="/home">Home</a>
+  <span style="padding-left: 15px; padding-right: 15px"></span>
+  <a routerLink="/contacts">Contacts</a>
+  <br /><br />
+  <button (click)="navigateToContacts()">Go to contacts</button>
+  <router-outlet></router-outlet>
+
+  <h2>Notes Routing</h2>
+  <a routerLink="/notes/listeNote">Go to notes routing</a>
+</div>
+<!-- END ROUTING -->

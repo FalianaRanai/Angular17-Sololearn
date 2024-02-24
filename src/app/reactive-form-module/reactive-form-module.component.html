@@ -1,0 +1,44 @@
+<!-- REACTIVE FORM -->
+<div class="lessonSection">
+  <h1>Reactive Form Module</h1>
+  <hr />
+
+  <h2>Type example</h2>
+  <input type="text" [formControl]="newName" name="newName" />
+  <p>You typed: "{{ newName.value }}"</p>
+
+  <h2>Submit example</h2>
+  <form (ngSubmit)="newShowName()">
+    <input type="text" [formControl]="newName" name="newName" />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <h2>Form group</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <label>Username:</label><br />
+    <input type="text" formControlName="username" /><br /><br />
+    <label>Password:</label><br />
+    <input type="text" formControlName="password" /><br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+  <p>
+    Your username is "<b>{{ loginForm.value.username }}</b
+    >" and your password is "<b>{{ loginForm.value.password }}</b
+    >"
+  </p>
+
+  <h2>Validator</h2>
+  <form [formGroup]="newLoginForm" (ngSubmit)="newLogin()">
+    <label>Username:</label><br />
+    <input type="text" formControlName="username" /><br /><br />
+    <label>Password:</label><br />
+    <input type="text" formControlName="password" /><br /><br />
+    <input type="submit" value="Submit" [disabled]="!newLoginForm.valid" />
+  </form>
+  <p>
+    Your username is "<b>{{ newLoginForm.value.username }}</b
+    >" and your password is "<b>{{ newLoginForm.value.password }}</b
+    >"
+  </p>
+</div>
+<!-- END REACTIVE FORM -->

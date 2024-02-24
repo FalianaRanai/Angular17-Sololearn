@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { NOTES, Note } from '../notes-list/note';
+import { NOTES, Note } from '../pages/notes-list/note';
 
 @Component({
   selector: 'app-add-note',
