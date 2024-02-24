@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NOTES } from '../pages/notes-list/note';
+import { NOTES } from '../notes-list/note';
 @Component({
   selector: 'app-note-detail',
   templateUrl: './note-detail.component.html',

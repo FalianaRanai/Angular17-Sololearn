@@ -8,8 +8,4 @@ import { Router } from '@angular/router';
 })
 export class LessonsComponent {
   constructor(private router: Router) {}
-
-  navigateToContacts() {
-    this.router.navigateByUrl('/contacts');
-  }
 }

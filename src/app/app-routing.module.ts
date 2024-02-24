@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddNoteComponent } from './add-note/add-note.component';
+import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { NoteDetailComponent } from './note-detail/note-detail.component';
-import { NotesComponent } from './notes/notes.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AddNoteComponent } from './pages/add-note/add-note.component';
+import { ApiExampleComponent } from './pages/api-example/api-example.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
+import { NoteDetailComponent } from './pages/note-detail/note-detail.component';
 import { NotesListComponent } from './pages/notes-list/notes-list.component';
+import { NotesComponent } from './pages/notes/notes.component';
 
 const routes: Routes = [
   {
@@ -17,23 +18,47 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', title: 'Home Page', component: LessonsComponent },
-      { path: 'home', title: 'Home Page', component: HomeComponent },
       {
-        path: 'contacts',
-        title: 'Contacts Page',
-        component: ContactsComponent,
+        path: 'home',
+        title: 'Home Page',
+        component: LessonsComponent,
+        children: [
+          {
+            path: 'contacts',
+            title: 'Contacts Page',
+            component: ContactsComponent,
+          },
+          {
+            path: 'home2',
+            title: 'Home 2',
+            component: HomeComponent,
+          },
+        ],
       },
-    ],
-  },
-  {
-    path: 'notes',
-    title: 'Notes',
-    component: NotesComponent,
-    children: [
-      { path: '', title: 'Liste Note', component: NotesComponent },
-      { path: 'listeNote', title: 'Liste Note', component: NotesListComponent },
-      { path: 'addNote', title: "Add Note", component: AddNoteComponent},
-      { path: "note/:id", title: "Note Detail", component: NoteDetailComponent }
+      {
+        path: 'notes',
+        title: 'Notes',
+        component: NotesComponent,
+        children: [
+          { path: '', title: 'Liste Note', component: NotesComponent },
+          {
+            path: 'listeNote',
+            title: 'Liste Note',
+            component: NotesListComponent,
+          },
+          { path: 'addNote', title: 'Add Note', component: AddNoteComponent },
+          {
+            path: 'note/:id',
+            title: 'Note Detail',
+            component: NoteDetailComponent,
+          },
+        ],
+      },
+      {
+        path: 'api-example',
+        title: 'Api Example',
+        component: ApiExampleComponent,
+      },
     ],
   },
   { path: '**', title: 'Page not found', component: NotFoundComponent },
