@@ -1,0 +1,24 @@
+<!-- ROUTING -->
+<div class="container pb-5">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5 class="card-title">Routing</h5>
+    </div>
+    <div class="card-body">
+      <div class="py-2">
+        <a routerLink="/home/home2">Home</a>
+        <span style="padding-left: 15px; padding-right: 15px"></span>
+        <a routerLink="/home/contacts">Contacts</a>
+        <div class="py-2">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+      <div class="py-2">
+        <h5>Notes Routing</h5>
+        <button class="btn btn-primary" routerLink="/notes/listeNote">Go to notes routing</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END ROUTING -->
