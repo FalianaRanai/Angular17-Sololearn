@@ -14,7 +14,7 @@ export class ReactiveFormModuleComponent {
   }
 
   loginForm = new FormGroup({
-    username: new FormControl(''),
+    username: new FormControl<string>(''),
     password: new FormControl(''),
   });
 
@@ -25,14 +25,25 @@ export class ReactiveFormModuleComponent {
   }
 
   newLoginForm = new FormGroup({
-    username: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
+
+  isSubmitted = false;
+
   newLogin() {
-    alert(
-      this.newLoginForm.value.username +
-        ' | ' +
-        this.newLoginForm.value.password
-    );
+    this.isSubmitted = true;
+    if (this.newLoginForm.valid) {
+      alert(
+        this.newLoginForm.value.username +
+          ' | ' +
+          this.newLoginForm.value.password
+      );
+    }
+  }
+
+  get newLoginFormControl() {
+    // console.log(this.loginForm.controls);
+    return this.newLoginForm.controls;
   }
 }

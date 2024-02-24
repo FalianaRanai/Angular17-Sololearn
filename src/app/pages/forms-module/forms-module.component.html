@@ -81,7 +81,9 @@
                 />
               </div>
 
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
             </form>
           </div>
         </div>
@@ -106,18 +108,21 @@
                   class="form-control"
                   [(ngModel)]="submitFormValidation"
                   name="submitFormValidation"
-                  aria-describedby="passwordHelpBlock"
+                  aria-describedby=""
                   required
                 />
               </div>
 
-              <button
-                type="submit"
-                class="btn btn-primary"
-                [disabled]="!myForm.form.valid"
-              >
-                Submit
-              </button>
+              <div class="mb-3">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  [disabled]="!myForm.form.valid"
+                >
+                  Submit
+                </button>
+              </div>
+
               <p>
                 The input's valid state is:
                 <b>{{ myForm.form.valid }}</b> because input is <b>required</b>
