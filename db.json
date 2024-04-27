@@ -5,7 +5,7 @@
       "nom": "Doe",
       "prenom": "John",
       "date_de_naissance": "1990-01-01",
-      "sexe": "M",
+      "sexe": "Homme",
       "email": "john.doe@example.com",
       "username": "johndoe",
       "password": "motdepasse123"
@@ -15,7 +15,7 @@
       "nom": "Smith",
       "prenom": "Jane",
       "date_de_naissance": "1995-05-05",
-      "sexe": "F",
+      "sexe": "Femme",
       "email": "jane.smith@example.com",
       "username": "janesmith",
       "password": "password456"
@@ -25,7 +25,7 @@
       "nom": "Doe",
       "prenom": "Alice",
       "date_de_naissance": "1992-03-15",
-      "sexe": "F",
+      "sexe": "Femme",
       "email": "alice.doe@example.com",
       "username": "alicedoe",
       "password": "secret123"
@@ -35,7 +35,7 @@
       "nom": "Brown",
       "prenom": "Mike",
       "date_de_naissance": "1988-07-20",
-      "sexe": "M",
+      "sexe": "Homme",
       "email": "mike.brown@example.com",
       "username": "mikebrown",
       "password": "password789"
@@ -45,7 +45,7 @@
       "nom": "Johnson",
       "prenom": "Emily",
       "date_de_naissance": "1993-11-10",
-      "sexe": "F",
+      "sexe": "Femme",
       "email": "emily.johnson@example.com",
       "username": "emilyjohnson",
       "password": "secure456"
@@ -55,7 +55,7 @@
       "nom": "Garcia",
       "prenom": "Carlos",
       "date_de_naissance": "1991-09-25",
-      "sexe": "M",
+      "sexe": "Homme",
       "email": "carlos.garcia@example.com",
       "username": "carlosgarcia",
       "password": "p@ssw0rd"
@@ -65,7 +65,7 @@
       "nom": "Chen",
       "prenom": "Sophia",
       "date_de_naissance": "1994-04-30",
-      "sexe": "F",
+      "sexe": "Femme",
       "email": "sophia.chen@example.com",
       "username": "sophiachen",
       "password": "myPassword"
@@ -75,7 +75,7 @@
       "nom": "Lee",
       "prenom": "David",
       "date_de_naissance": "1987-12-05",
-      "sexe": "M",
+      "sexe": "Homme",
       "email": "david.lee@example.com",
       "username": "davidlee",
       "password": "letmein123"
@@ -85,7 +85,7 @@
       "nom": "Wang",
       "prenom": "Linda",
       "date_de_naissance": "1996-06-18",
-      "sexe": "F",
+      "sexe": "Femme",
       "email": "linda.wang@example.com",
       "username": "lindawang",
       "password": "qwerty789"
@@ -95,7 +95,7 @@
       "nom": "Martinez",
       "prenom": "Daniel",
       "date_de_naissance": "1989-02-28",
-      "sexe": "M",
+      "sexe": "Homme",
       "email": "daniel.martinez@example.com",
       "username": "danmartinez",
       "password": "danielpass"
