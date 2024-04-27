@@ -18,7 +18,13 @@ import { FormsModuleComponent } from './pages/lessons/forms-module/forms-module.
 import { LessonsComponent } from './pages/lessons/lessons.component';
 import { ReactiveFormModuleComponent } from './pages/lessons/reactive-form-module/reactive-form-module.component';
 import { RoutingComponent } from './pages/lessons/routing/routing.component';
+import { SetupComponentParentEnfantComponent } from './pages/lessons/setup/setup-component-parent-enfant/setup-component-parent-enfant.component';
+import { SetupCreerComponentComponent } from './pages/lessons/setup/setup-creer-component/setup-creer-component.component';
+import { SetupCreerProjetComponent } from './pages/lessons/setup/setup-creer-projet/setup-creer-projet.component';
+import { SetupCreerServiceComponent } from './pages/lessons/setup/setup-creer-service/setup-creer-service.component';
+import { SetupExecuterApplicationComponent } from './pages/lessons/setup/setup-executer-application/setup-executer-application.component';
 import { SetupInstallerAngularComponent } from './pages/lessons/setup/setup-installer-angular/setup-installer-angular.component';
+import { SetupMiseEnPlaceRoutingComponent } from './pages/lessons/setup/setup-mise-en-place-routing/setup-mise-en-place-routing.component';
 import { SetupComponent } from './pages/lessons/setup/setup.component';
 import { InterpolationAccoladeComponent } from './pages/lessons/templating/interpolation-accolade/interpolation-accolade.component';
 import { LiaisonEvenementParentheseComponent } from './pages/lessons/templating/liaison-evenement-parenthese/liaison-evenement-parenthese.component';
@@ -56,6 +62,12 @@ import { NotesComponent } from './pages/notes/notes.component';
     LiaisonProprieteCrochetComponent,
     LiaisonEvenementParentheseComponent,
     SetupInstallerAngularComponent,
+    SetupCreerProjetComponent,
+    SetupExecuterApplicationComponent,
+    SetupMiseEnPlaceRoutingComponent,
+    SetupComponentParentEnfantComponent,
+    SetupCreerServiceComponent,
+    SetupCreerComponentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

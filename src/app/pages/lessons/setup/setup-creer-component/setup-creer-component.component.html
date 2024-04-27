@@ -1,0 +1,26 @@
+<div class="py-2">
+  <h5 class="card-title fw-bold">7. Créer un component</h5>
+  <p class="card-text">Pour créer un component angular il faut faire:</p>
+
+  <div class="card-text">
+    <pre>
+      <code class="language-nginx">
+        {{"ng generate component nom_du_component"}}
+      </code>
+    </pre>
+  </div>
+
+  <p class="card-text">
+    <span class="fw-bold">NB: </span>Il faut enlever standalone et imports dans
+    le .ts et importer le component dans le module (de base: app.module.ts)
+  </p>
+
+  <p class="card-text">Une autre solution serait de faire directement:</p>
+  <div class="card-text">
+    <pre>
+      <code class="language-nginx">
+        {{"ng generate component nom_du_component --standalone false"}}
+      </code>
+    </pre>
+  </div>
+</div>
