@@ -1,0 +1,16 @@
+.card-text pre {
+  /* padding: 1rem; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  background-color: #f8f9fa; /* couleur de fond */
+  font-family: "Courier New", Courier, monospace; /* police de caractères monospace */
+  overflow-x: auto; /* permet de faire défiler horizontalement si nécessaire */
+}
+
+.card-text code {
+  display: block;
+  color: #212529; /* couleur du texte */
+  font-size: 0.875rem; /* taille de la police */
+  white-space: pre-wrap; /* conserve les sauts de ligne */
+}

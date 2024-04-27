@@ -1,0 +1,22 @@
+<div class="py-2">
+  <div class="card text-center w-100 m-0">
+    <div class="card-header">My Notes</div>
+    <div class="card-body d-flex gap-2 flex-wrap">
+      @for (note of listeNote; track note.id) {
+      <div
+        class="card"
+        [routerLink]="['/notes/note', note.id]"
+      >
+        <div class="card-header">
+          <h5>
+            <b>{{ note.title }}</b>
+          </h5>
+        </div>
+        <div class="card-body">
+          <p>{{ note.text }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

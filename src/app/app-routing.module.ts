@@ -3,13 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AddNoteComponent } from './pages/add-note/add-note.component';
 import { ApiExampleComponent } from './pages/api-example/api-example.component';
-import { ContactsComponent } from './pages/contacts/contacts.component';
+import { ContactsComponent } from './pages/lessons/contacts/contacts.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
-import { NoteDetailComponent } from './pages/note-detail/note-detail.component';
-import { NotesListComponent } from './pages/notes-list/notes-list.component';
 import { NotesComponent } from './pages/notes/notes.component';
+import { NOTES_ROUTES } from './routes/notes.routes';
 
 const routes: Routes = [
   {
@@ -39,20 +37,7 @@ const routes: Routes = [
         path: 'notes',
         title: 'Notes',
         component: NotesComponent,
-        children: [
-          { path: '', title: 'Liste Note', component: NotesComponent },
-          {
-            path: 'listeNote',
-            title: 'Liste Note',
-            component: NotesListComponent,
-          },
-          { path: 'addNote', title: 'Add Note', component: AddNoteComponent },
-          {
-            path: 'note/:id',
-            title: 'Note Detail',
-            component: NoteDetailComponent,
-          },
-        ],
+        children: NOTES_ROUTES,
       },
       {
         path: 'api-example',

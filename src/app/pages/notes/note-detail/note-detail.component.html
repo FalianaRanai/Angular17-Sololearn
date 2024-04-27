@@ -1,0 +1,33 @@
+<div class="py-2">
+  @if (note) {
+  <div class="card text-center w-100">
+    <div class="card-header">{{ note.title }}</div>
+    <div class="card-body">
+      <h2>ID: {{ note.id }}</h2>
+      <p class="card-text">
+        {{ note.text }}
+      </p>
+      <button class="btn btn-danger" (click)="deleteNote()">Delete Note</button>
+    </div>
+  </div>
+  } @else {
+  <p>Note not found</p>
+  }
+</div>
+
+<!-- <div class="noteContainer">
+  @if (note) {
+  <div class="card">
+    <div class="container">
+      <h1>
+        <b>{{ note.title }}</b>
+      </h1>
+      <h2>ID: {{ note.id }}</h2>
+      <p>{{ note.text }}</p>
+      <button class="deleteNote" (click)="deleteNote()">Delete Note</button>
+    </div>
+  </div>
+  } @else {
+  <p>Note not found</p>
+  }
+</div> -->
