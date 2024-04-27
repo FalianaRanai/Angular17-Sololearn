@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ApiExampleComponent } from './pages/api-example/api-example.component';
+import { RestApiGetComponent } from './pages/api-example/rest-api/rest-api-get/rest-api-get.component';
+import { RestApiComponent } from './pages/api-example/rest-api/rest-api.component';
+import { SetupJsonServerInstallerCreerFichierComponent } from './pages/api-example/setup-json-server/setup-json-server-installer-creer-fichier/setup-json-server-installer-creer-fichier.component';
+import { SetupJsonServerInstallerDemarrerServerComponent } from './pages/api-example/setup-json-server/setup-json-server-installer-demarrer-server/setup-json-server-installer-demarrer-server.component';
+import { SetupJsonServerInstallerJsonServerComponent } from './pages/api-example/setup-json-server/setup-json-server-installer-json-server/setup-json-server-installer-json-server.component';
 import { SetupJsonServerComponent } from './pages/api-example/setup-json-server/setup-json-server.component';
 import { ComponentIntegrationComponent } from './pages/lessons/component-integration/component-integration.component';
 import { EventsComponent } from './pages/lessons/events/events.component';
@@ -26,6 +32,15 @@ import { SetupExecuterApplicationComponent } from './pages/lessons/setup/setup-e
 import { SetupInstallerAngularComponent } from './pages/lessons/setup/setup-installer-angular/setup-installer-angular.component';
 import { SetupMiseEnPlaceRoutingComponent } from './pages/lessons/setup/setup-mise-en-place-routing/setup-mise-en-place-routing.component';
 import { SetupComponent } from './pages/lessons/setup/setup.component';
+import { StructureFichierAppComponent } from './pages/lessons/structure-fichier/structure-fichier-app/structure-fichier-app.component';
+import { StructureFichierComponentsComponent } from './pages/lessons/structure-fichier/structure-fichier-components/structure-fichier-components.component';
+import { StructureFichierComposantComponent } from './pages/lessons/structure-fichier/structure-fichier-composant/structure-fichier-composant.component';
+import { StructureFichierInterfaceComponent } from './pages/lessons/structure-fichier/structure-fichier-interface/structure-fichier-interface.component';
+import { StructureFichierPagesComponent } from './pages/lessons/structure-fichier/structure-fichier-pages/structure-fichier-pages.component';
+import { StructureFichierRoutesComponent } from './pages/lessons/structure-fichier/structure-fichier-routes/structure-fichier-routes.component';
+import { StructureFichierServicesComponent } from './pages/lessons/structure-fichier/structure-fichier-services/structure-fichier-services.component';
+import { StructureFichierSrcComponent } from './pages/lessons/structure-fichier/structure-fichier-src/structure-fichier-src.component';
+import { StructureFichierComponent } from './pages/lessons/structure-fichier/structure-fichier.component';
 import { InterpolationAccoladeComponent } from './pages/lessons/templating/interpolation-accolade/interpolation-accolade.component';
 import { LiaisonEvenementParentheseComponent } from './pages/lessons/templating/liaison-evenement-parenthese/liaison-evenement-parenthese.component';
 import { LiaisonProprieteCrochetComponent } from './pages/lessons/templating/liaison-propriete-crochet/liaison-propriete-crochet.component';
@@ -68,8 +83,28 @@ import { NotesComponent } from './pages/notes/notes.component';
     SetupComponentParentEnfantComponent,
     SetupCreerServiceComponent,
     SetupCreerComponentComponent,
+    StructureFichierComponent,
+    StructureFichierSrcComponent,
+    StructureFichierAppComponent,
+    StructureFichierComposantComponent,
+    StructureFichierComponentsComponent,
+    StructureFichierPagesComponent,
+    StructureFichierRoutesComponent,
+    StructureFichierServicesComponent,
+    SetupJsonServerInstallerJsonServerComponent,
+    SetupJsonServerInstallerCreerFichierComponent,
+    SetupJsonServerInstallerDemarrerServerComponent,
+    RestApiComponent,
+    RestApiGetComponent,
+    StructureFichierInterfaceComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
