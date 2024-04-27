@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    <h5 class="card-title">Setup JSON Server</h5>
+  </div>
+  <div class="card-body">
+    <div class="py-2">
+      <h5 class="card-title">1. Installez JSON Server :</h5>
+      <p class="card-text">
+        Si vous n'avez pas déjà JSON Server installé, vous pouvez l'installer
+        via npm (Node Package Manager) en utilisant la commande suivante :
+      </p>
+      <p class="card-text fw-bold">npm install -g json-server</p>
+    </div>
+
+    <div class="py-2">
+      <h5 class="card-title">2. Créez un fichier JSON :</h5>
+      <p class="card-text">
+        A la racine du projet, créer un fichier json (ex:
+        <span class="fw-bold">db.json</span> )
+      </p>
+      <div class="card-text">
+        <pre>
+          <code>
+            {{ jsonExample }}
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="py-2">
+      <h5 class="card-title">3. Démarrez JSON Server :</h5>
+      <p class="card-text">
+        Dans le répertoire où se trouve votre fichier db.json, lancez JSON
+        Server en exécutant la commande suivante dans votre terminal :
+      </p>
+      <p class="card-text fw-bold">json-server --watch db.json</p>
+    </div>
+  </div>
+</div>

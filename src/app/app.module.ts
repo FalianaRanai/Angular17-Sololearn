@@ -9,20 +9,25 @@ import { HeaderExampleComponent } from './components/header-example/headerExampl
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { AddNoteComponent } from './pages/add-note/add-note.component';
 import { ApiExampleComponent } from './pages/api-example/api-example.component';
-import { ComponentIntegrationComponent } from './pages/component-integration/component-integration.component';
-import { EventsComponent } from './pages/events/events.component';
-import { ForIfComponent } from './pages/for-if/for-if.component';
-import { FormsModuleComponent } from './pages/forms-module/forms-module.component';
+import { SetupJsonServerComponent } from './pages/api-example/setup-json-server/setup-json-server.component';
+import { ComponentIntegrationComponent } from './pages/lessons/component-integration/component-integration.component';
+import { EventsComponent } from './pages/lessons/events/events.component';
+import { ForIfComponent } from './pages/lessons/for-if/for-if.component';
+import { FormsModuleComponent } from './pages/lessons/forms-module/forms-module.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
-import { NoteDetailComponent } from './pages/note-detail/note-detail.component';
-import { NotesListComponent } from './pages/notes-list/notes-list.component';
+import { ReactiveFormModuleComponent } from './pages/lessons/reactive-form-module/reactive-form-module.component';
+import { RoutingComponent } from './pages/lessons/routing/routing.component';
+import { SetupInstallerAngularComponent } from './pages/lessons/setup/setup-installer-angular/setup-installer-angular.component';
+import { SetupComponent } from './pages/lessons/setup/setup.component';
+import { InterpolationAccoladeComponent } from './pages/lessons/templating/interpolation-accolade/interpolation-accolade.component';
+import { LiaisonEvenementParentheseComponent } from './pages/lessons/templating/liaison-evenement-parenthese/liaison-evenement-parenthese.component';
+import { LiaisonProprieteCrochetComponent } from './pages/lessons/templating/liaison-propriete-crochet/liaison-propriete-crochet.component';
+import { TemplatingComponent } from './pages/lessons/templating/templating.component';
+import { AddNoteComponent } from './pages/notes/add-note/add-note.component';
+import { NoteDetailComponent } from './pages/notes/note-detail/note-detail.component';
+import { NotesListComponent } from './pages/notes/notes-list/notes-list.component';
 import { NotesComponent } from './pages/notes/notes.component';
-import { ReactiveFormModuleComponent } from './pages/reactive-form-module/reactive-form-module.component';
-import { RoutingComponent } from './pages/routing/routing.component';
-import { SetupComponent } from './pages/setup/setup.component';
-import { SetupJsonServerComponent } from './setup-json-server/setup-json-server.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +51,11 @@ import { SetupJsonServerComponent } from './setup-json-server/setup-json-server.
     FooterComponent,
     ApiExampleComponent,
     SetupJsonServerComponent,
+    TemplatingComponent,
+    InterpolationAccoladeComponent,
+    LiaisonProprieteCrochetComponent,
+    LiaisonEvenementParentheseComponent,
+    SetupInstallerAngularComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

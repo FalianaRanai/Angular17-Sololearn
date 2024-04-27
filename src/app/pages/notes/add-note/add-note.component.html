@@ -1,0 +1,51 @@
+<!-- ADD NOTE FORM -->
+<div class="pb-5">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5 class="card-title">Ajouter une note</h5>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <h4>Ajouter une note</h4>
+        <hr />
+      </div>
+      <form [formGroup]="addNoteForm" (ngSubmit)="addNote()">
+        <div class="mb-3">
+          <label for="inputPassword5" class="form-label">Title:</label>
+          <input
+            type="text"
+            id="inputPassword5"
+            class="form-control"
+            aria-describedby="passwordHelpBlock"
+            formControlName="title"
+          />
+
+          @if(formControl['title'].touched || isSubmitted){
+          @if(formControl['title'].errors?.['required']){
+          <span class="text-danger">Ce champ est requis.</span>
+          } }
+        </div>
+
+        <div class="mb-3">
+          <label for="inputPassword5" class="form-label">Text:</label>
+          <textarea
+            id="inputPassword5"
+            class="form-control"
+            aria-describedby="passwordHelpBlock"
+            formControlName="text"
+          ></textarea>
+
+          @if(formControl['text'].touched || isSubmitted){
+          @if(formControl['text'].errors?.['required']){
+          <span class="text-danger">Ce champ est requis.</span>
+          } }
+        </div>
+
+        <div class="mb-3">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- END ADD NOTE FORM -->

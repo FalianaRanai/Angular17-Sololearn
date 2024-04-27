@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AddNoteComponent } from './pages/add-note/add-note.component';
 import { ApiExampleComponent } from './pages/api-example/api-example.component';
-import { ContactsComponent } from './pages/contacts/contacts.component';
+import { ContactsComponent } from './pages/lessons/contacts/contacts.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
-import { NoteDetailComponent } from './pages/note-detail/note-detail.component';
-import { NotesListComponent } from './pages/notes-list/notes-list.component';
+import { AddNoteComponent } from './pages/notes/add-note/add-note.component';
+import { NoteDetailComponent } from './pages/notes/note-detail/note-detail.component';
+import { NotesListComponent } from './pages/notes/notes-list/notes-list.component';
 import { NotesComponent } from './pages/notes/notes.component';
 
 const routes: Routes = [
