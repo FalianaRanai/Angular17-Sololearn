@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nom": "Doe",
+      "prenom": "John",
+      "date_de_naissance": "1990-01-01",
+      "sexe": "M",
+      "email": "john.doe@example.com",
+      "username": "johndoe",
+      "password": "motdepasse123"
+    },
+    {
+      "id": 2,
+      "nom": "Smith",
+      "prenom": "Jane",
+      "date_de_naissance": "1995-05-05",
+      "sexe": "F",
+      "email": "jane.smith@example.com",
+      "username": "janesmith",
+      "password": "password456"
+    },
+    {
+      "id": 3,
+      "nom": "Doe",
+      "prenom": "Alice",
+      "date_de_naissance": "1992-03-15",
+      "sexe": "F",
+      "email": "alice.doe@example.com",
+      "username": "alicedoe",
+      "password": "secret123"
+    },
+    {
+      "id": 4,
+      "nom": "Brown",
+      "prenom": "Mike",
+      "date_de_naissance": "1988-07-20",
+      "sexe": "M",
+      "email": "mike.brown@example.com",
+      "username": "mikebrown",
+      "password": "password789"
+    },
+    {
+      "id": 5,
+      "nom": "Johnson",
+      "prenom": "Emily",
+      "date_de_naissance": "1993-11-10",
+      "sexe": "F",
+      "email": "emily.johnson@example.com",
+      "username": "emilyjohnson",
+      "password": "secure456"
+    },
+    {
+      "id": 6,
+      "nom": "Garcia",
+      "prenom": "Carlos",
+      "date_de_naissance": "1991-09-25",
+      "sexe": "M",
+      "email": "carlos.garcia@example.com",
+      "username": "carlosgarcia",
+      "password": "p@ssw0rd"
+    },
+    {
+      "id": 7,
+      "nom": "Chen",
+      "prenom": "Sophia",
+      "date_de_naissance": "1994-04-30",
+      "sexe": "F",
+      "email": "sophia.chen@example.com",
+      "username": "sophiachen",
+      "password": "myPassword"
+    },
+    {
+      "id": 8,
+      "nom": "Lee",
+      "prenom": "David",
+      "date_de_naissance": "1987-12-05",
+      "sexe": "M",
+      "email": "david.lee@example.com",
+      "username": "davidlee",
+      "password": "letmein123"
+    },
+    {
+      "id": 9,
+      "nom": "Wang",
+      "prenom": "Linda",
+      "date_de_naissance": "1996-06-18",
+      "sexe": "F",
+      "email": "linda.wang@example.com",
+      "username": "lindawang",
+      "password": "qwerty789"
+    },
+    {
+      "id": 10,
+      "nom": "Martinez",
+      "prenom": "Daniel",
+      "date_de_naissance": "1989-02-28",
+      "sexe": "M",
+      "email": "daniel.martinez@example.com",
+      "username": "danmartinez",
+      "password": "danielpass"
+    }
+  ]
+}

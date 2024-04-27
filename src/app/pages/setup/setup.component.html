@@ -84,7 +84,7 @@
         </p>
       </div>
       <div class="py-2">
-        <h6 class="fw-bold">7) Créer un service</h6>
+        <h6 class="fw-bold">7) Créer un component</h6>
         <p class="card-text">
           {{ "Pour exécuter un component angular il faut faire: " }}
           <span class="fw-bold">{{
@@ -94,6 +94,11 @@
         <p class="card-text">
           Il faut enlever standalone et imports dans le .ts et importer le
           component dans le module (de base: app.module.ts)
+        </p>
+        <p class="card-text">
+          Sinon une autre solution serait de faire directement: <span class="fw-bold">{{
+            "ng generate component --standalone false"
+          }}</span>
         </p>
       </div>
     </div>

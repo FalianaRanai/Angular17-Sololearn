@@ -19,9 +19,10 @@ import { LessonsComponent } from './pages/lessons/lessons.component';
 import { NoteDetailComponent } from './pages/note-detail/note-detail.component';
 import { NotesListComponent } from './pages/notes-list/notes-list.component';
 import { NotesComponent } from './pages/notes/notes.component';
-import { ReactiveFormModuleComponent } from './reactive-form-module/reactive-form-module.component';
-import { RoutingComponent } from './routing/routing.component';
-import { SetupComponent } from './setup/setup.component';
+import { ReactiveFormModuleComponent } from './pages/reactive-form-module/reactive-form-module.component';
+import { RoutingComponent } from './pages/routing/routing.component';
+import { SetupComponent } from './pages/setup/setup.component';
+import { SetupJsonServerComponent } from './setup-json-server/setup-json-server.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SetupComponent } from './setup/setup.component';
     RoutingComponent,
     FooterComponent,
     ApiExampleComponent,
+    SetupJsonServerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
