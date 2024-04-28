@@ -70,7 +70,7 @@
         <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
       </div>
     </div>
-    <hr>
+    <hr />
   </div>
   @if (isLoading){
   <div class="d-flex justify-content-center">
@@ -78,7 +78,20 @@
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  } @else {
+  } @else { @if (isError){
+  <div class="row">
+    <div class="col-lg-6">
+      <p>
+        <span class="fw-bold">Une erreur est survenue: </span>
+        <span class="text-danger">{{ errorMessage }}</span>
+      </p>
+      <p class="card-text">
+        Probablement il faut lancer le serveur: <span class="fw-bold">json-server --watch db.json</span>
+      </p>
+    </div>
+  </div>
+  } @else{
+
   <div class="row">
     @for (user of listeUser; track user.id) {
     <div class="col-lg-4 my-2">
@@ -127,5 +140,5 @@
     </div>
     }
   </div>
-  }
+  } }
 </div>

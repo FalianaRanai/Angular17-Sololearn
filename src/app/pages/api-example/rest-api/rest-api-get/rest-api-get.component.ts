@@ -16,6 +16,8 @@ export class RestApiGetComponent {
 
   apiUrl: string = 'http://localhost:3000';
   isLoading: boolean = false;
+  isError: boolean = false;
+  errorMessage: string = '';
   listeUser: User[] = [];
 
   getListeUser = () => {
@@ -27,7 +29,9 @@ export class RestApiGetComponent {
         this.isLoading = false;
       },
       error: (error) => {
-        console.error(error);
+        console.error(error.message);
+        this.isError = true;
+        this.errorMessage = error.message;
         this.isLoading = false;
       },
     });

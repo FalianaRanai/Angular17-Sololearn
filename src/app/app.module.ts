@@ -12,6 +12,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ApiExampleComponent } from './pages/api-example/api-example.component';
 import { RestApiGetComponent } from './pages/api-example/rest-api/rest-api-get/rest-api-get.component';
+import { RestApiPostComponent } from './pages/api-example/rest-api/rest-api-post/rest-api-post.component';
 import { RestApiComponent } from './pages/api-example/rest-api/rest-api.component';
 import { SetupJsonServerInstallerCreerFichierComponent } from './pages/api-example/setup-json-server/setup-json-server-installer-creer-fichier/setup-json-server-installer-creer-fichier.component';
 import { SetupJsonServerInstallerDemarrerServerComponent } from './pages/api-example/setup-json-server/setup-json-server-installer-demarrer-server/setup-json-server-installer-demarrer-server.component';
@@ -24,14 +25,8 @@ import { FormsModuleComponent } from './pages/lessons/forms-module/forms-module.
 import { LessonsComponent } from './pages/lessons/lessons.component';
 import { ReactiveFormModuleComponent } from './pages/lessons/reactive-form-module/reactive-form-module.component';
 import { RoutingComponent } from './pages/lessons/routing/routing.component';
-import { SetupComponentParentEnfantComponent } from './pages/lessons/setup/setup-component-parent-enfant/setup-component-parent-enfant.component';
-import { SetupCreerComponentComponent } from './pages/lessons/setup/setup-creer-component/setup-creer-component.component';
-import { SetupCreerProjetComponent } from './pages/lessons/setup/setup-creer-projet/setup-creer-projet.component';
-import { SetupCreerServiceComponent } from './pages/lessons/setup/setup-creer-service/setup-creer-service.component';
-import { SetupExecuterApplicationComponent } from './pages/lessons/setup/setup-executer-application/setup-executer-application.component';
-import { SetupInstallerAngularComponent } from './pages/lessons/setup/setup-installer-angular/setup-installer-angular.component';
-import { SetupMiseEnPlaceRoutingComponent } from './pages/lessons/setup/setup-mise-en-place-routing/setup-mise-en-place-routing.component';
 import { SetupComponent } from './pages/lessons/setup/setup.component';
+import { SetupModule } from './pages/lessons/setup/setup.module';
 import { StructureFichierAppComponent } from './pages/lessons/structure-fichier/structure-fichier-app/structure-fichier-app.component';
 import { StructureFichierComponentsComponent } from './pages/lessons/structure-fichier/structure-fichier-components/structure-fichier-components.component';
 import { StructureFichierComposantComponent } from './pages/lessons/structure-fichier/structure-fichier-composant/structure-fichier-composant.component';
@@ -76,13 +71,6 @@ import { NotesComponent } from './pages/notes/notes.component';
     InterpolationAccoladeComponent,
     LiaisonProprieteCrochetComponent,
     LiaisonEvenementParentheseComponent,
-    SetupInstallerAngularComponent,
-    SetupCreerProjetComponent,
-    SetupExecuterApplicationComponent,
-    SetupMiseEnPlaceRoutingComponent,
-    SetupComponentParentEnfantComponent,
-    SetupCreerServiceComponent,
-    SetupCreerComponentComponent,
     StructureFichierComponent,
     StructureFichierSrcComponent,
     StructureFichierAppComponent,
@@ -97,6 +85,7 @@ import { NotesComponent } from './pages/notes/notes.component';
     RestApiComponent,
     RestApiGetComponent,
     StructureFichierInterfaceComponent,
+    RestApiPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -104,6 +93,7 @@ import { NotesComponent } from './pages/notes/notes.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SetupModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
