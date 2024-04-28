@@ -1,0 +1,38 @@
+<div class="py-2">
+  <h5 class="card-title fw-bold">8. Créer un module</h5>
+  <p class="card-text">
+    Pour bien structurer un projet Angular, il faut répartir les composants dans
+    différents modules.
+  </p>
+  <p class="card-text">
+    Les composants liés à la fonctionnalité Setup se trouveront dans le
+    SetupModule
+  </p>
+  <p class="card-text">Pour créer un module angular il faut faire:</p>
+
+  <div class="card-text">
+    <pre>
+      <code class="language-nginx">
+        {{"ng generate module nom_du_module"}}
+      </code>
+    </pre>
+  </div>
+
+  <p class="card-text">
+    <span class="fw-bold">NB: </span> On déclare les composants dans
+    <span class="fw-bold">declarations</span> mais on doit aussi les exporter
+    dans <span class="fw-bolf">exports</span>
+  </p>
+  <p class="card-text">
+    Ensuite, dans <span class="fw-bold">app.module.ts</span>, on importe le
+    module nouvellement créé dans <span class="fw-bold">imports</span>
+  </p>
+
+  <div class="card-text">
+    <pre>
+      <code class="language-typescript">
+        {{ exempleModule }}
+      </code>
+    </pre>
+  </div>
+</div>

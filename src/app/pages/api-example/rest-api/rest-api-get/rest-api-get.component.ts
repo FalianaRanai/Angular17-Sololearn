@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/users.interface';
 import { UsersService } from 'src/app/services/users/users.service';
+import { closeModalButton } from 'src/app/utils/closeModalButton.utils';
 
 @Component({
   selector: 'app-rest-api-get',
@@ -8,7 +10,11 @@ import { UsersService } from 'src/app/services/users/users.service';
   styleUrl: './rest-api-get.component.css',
 })
 export class RestApiGetComponent {
-  constructor(private service: UsersService) {}
+  constructor(
+    private service: UsersService,
+    private router: Router,
+    private renderer: Renderer2
+  ) {}
 
   ngOnInit() {
     this.getListeUser();
@@ -16,7 +22,10 @@ export class RestApiGetComponent {
 
   apiUrl: string = 'http://localhost:3000';
   isLoading: boolean = false;
+  isError: boolean = false;
+  errorMessage: string = '';
   listeUser: User[] = [];
+  isLoadingDelete: boolean = false;
 
   getListeUser = () => {
     this.isLoading = true;
@@ -27,10 +36,37 @@ export class RestApiGetComponent {
         this.isLoading = false;
       },
       error: (error) => {
-        console.error(error);
+        console.error(error.message);
+        this.isError = true;
+        this.errorMessage = error.message;
         this.isLoading = false;
       },
     });
+  };
+
+  deleteUser = (id: number) => {
+    this.isLoadingDelete = true;
+    this.service.deleteUser(`${id}`).subscribe({
+      next: (response: any) => {
+        this.isLoadingDelete = false;
+        closeModalButton(this.renderer);
+        this.getListeUser();
+      },
+      error: (error) => {
+        console.error(error.message);
+        this.isError = true;
+        this.errorMessage = error.message;
+        this.isLoadingDelete = false;
+      },
+    });
+  };
+
+  goToAddUser = () => {
+    this.router.navigateByUrl('/api-example/addUser');
+  };
+
+  goToUpdateUser = (id: number) => {
+    this.router.navigateByUrl(`/api-example/updateUser/${id}`);
   };
 
   exempleInterface = `
