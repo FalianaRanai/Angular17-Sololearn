@@ -67,7 +67,9 @@
         <h5 class="display-6">Liste des users</h5>
       </div>
       <div>
-        <button class="btn btn-primary" (click) = "goToAddUser()"><i class="fa fa-plus"></i></button>
+        <button class="btn btn-primary" (click)="goToAddUser()">
+          <i class="fa fa-plus"></i>
+        </button>
       </div>
     </div>
     <hr />
@@ -86,7 +88,8 @@
         <span class="text-danger">{{ errorMessage }}</span>
       </p>
       <p class="card-text">
-        Probablement il faut lancer le serveur: <span class="fw-bold">json-server --watch db.json</span>
+        Probablement il faut lancer le serveur:
+        <span class="fw-bold">json-server --watch db.json</span>
       </p>
     </div>
   </div>
@@ -131,9 +134,69 @@
               <i class="fa fa-edit"></i>
             </button>
 
-            <button class="btn btn-danger">
+            <!-- Button trigger modal -->
+            <button
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              [attr.data-bs-target]="'#modalDelete' + user.id"
+            >
               <i class="fa fa-trash"></i>
             </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              [id]="'modalDelete' + user.id"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                      Supprimer un user
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Êtes-vous sûr de vouloir supprimer l'user:
+                    <span class="fw-bold"
+                      >{{ user.nom }} {{ user.prenom }}</span
+                    >
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Fermer
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      (click)="deleteUser(user.id)"
+                    >
+                      @if(isLoadingDelete){
+                      <span
+                        class="spinner-border spinner-border-sm"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      } Supprimer
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -99,26 +99,6 @@
       "email": "daniel.martinez@example.com",
       "username": "danmartinez",
       "password": "danielpass"
-    },
-    {
-      "id": "2cbc",
-      "nom": "user",
-      "prenom": "user",
-      "username": "user",
-      "sexe": "Autres",
-      "email": "user@email.com",
-      "password": "0123456789",
-      "confirmPassword": "0123456789"
-    },
-    {
-      "nom": "test",
-      "prenom": "test2",
-      "username": "test",
-      "sexe": "Femme",
-      "email": "test@email.com",
-      "password": "0123456789",
-      "confirmPassword": "0123456789",
-      "id": "afdf"
     }
   ]
 }
