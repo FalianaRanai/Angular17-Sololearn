@@ -67,7 +67,7 @@
         <h5 class="display-6">Liste des users</h5>
       </div>
       <div>
-        <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
+        <button class="btn btn-primary" (click) = "goToAddUser()"><i class="fa fa-plus"></i></button>
       </div>
     </div>
     <hr />
@@ -127,7 +127,7 @@
 
         <div class="card-footer">
           <div class="d-flex justify-content-end gap-2">
-            <button class="btn btn-success">
+            <button class="btn btn-success" (click)="goToUpdateUser(user.id)">
               <i class="fa fa-edit"></i>
             </button>
 

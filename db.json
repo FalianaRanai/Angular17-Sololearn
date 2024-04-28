@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "nom": "Doe",
       "prenom": "John",
       "date_de_naissance": "1990-01-01",
@@ -11,7 +11,7 @@
       "password": "motdepasse123"
     },
     {
-      "id": 2,
+      "id": "2",
       "nom": "Smith",
       "prenom": "Jane",
       "date_de_naissance": "1995-05-05",
@@ -21,7 +21,7 @@
       "password": "password456"
     },
     {
-      "id": 3,
+      "id": "3",
       "nom": "Doe",
       "prenom": "Alice",
       "date_de_naissance": "1992-03-15",
@@ -31,7 +31,7 @@
       "password": "secret123"
     },
     {
-      "id": 4,
+      "id": "4",
       "nom": "Brown",
       "prenom": "Mike",
       "date_de_naissance": "1988-07-20",
@@ -41,7 +41,7 @@
       "password": "password789"
     },
     {
-      "id": 5,
+      "id": "5",
       "nom": "Johnson",
       "prenom": "Emily",
       "date_de_naissance": "1993-11-10",
@@ -51,7 +51,7 @@
       "password": "secure456"
     },
     {
-      "id": 6,
+      "id": "6",
       "nom": "Garcia",
       "prenom": "Carlos",
       "date_de_naissance": "1991-09-25",
@@ -61,7 +61,7 @@
       "password": "p@ssw0rd"
     },
     {
-      "id": 7,
+      "id": "7",
       "nom": "Chen",
       "prenom": "Sophia",
       "date_de_naissance": "1994-04-30",
@@ -71,7 +71,7 @@
       "password": "myPassword"
     },
     {
-      "id": 8,
+      "id": "8",
       "nom": "Lee",
       "prenom": "David",
       "date_de_naissance": "1987-12-05",
@@ -81,7 +81,7 @@
       "password": "letmein123"
     },
     {
-      "id": 9,
+      "id": "9",
       "nom": "Wang",
       "prenom": "Linda",
       "date_de_naissance": "1996-06-18",
@@ -91,7 +91,7 @@
       "password": "qwerty789"
     },
     {
-      "id": 10,
+      "id": "10",
       "nom": "Martinez",
       "prenom": "Daniel",
       "date_de_naissance": "1989-02-28",
@@ -99,6 +99,26 @@
       "email": "daniel.martinez@example.com",
       "username": "danmartinez",
       "password": "danielpass"
+    },
+    {
+      "id": "2cbc",
+      "nom": "user",
+      "prenom": "user",
+      "username": "user",
+      "sexe": "Autres",
+      "email": "user@email.com",
+      "password": "0123456789",
+      "confirmPassword": "0123456789"
+    },
+    {
+      "id": "afdf",
+      "nom": "user",
+      "prenom": "user",
+      "username": "user",
+      "sexe": "Autres",
+      "email": "user@email.com",
+      "password": "0123456789",
+      "confirmPassword": "0123456789"
     }
   ]
 }

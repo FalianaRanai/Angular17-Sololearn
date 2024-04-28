@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/users.interface';
 import { UsersService } from 'src/app/services/users/users.service';
 
@@ -8,7 +9,7 @@ import { UsersService } from 'src/app/services/users/users.service';
   styleUrl: './rest-api-get.component.css',
 })
 export class RestApiGetComponent {
-  constructor(private service: UsersService) {}
+  constructor(private service: UsersService, private router: Router) {}
 
   ngOnInit() {
     this.getListeUser();
@@ -35,6 +36,14 @@ export class RestApiGetComponent {
         this.isLoading = false;
       },
     });
+  };
+
+  goToAddUser = () => {
+    this.router.navigateByUrl('/api-example/addUser');
+  };
+
+  goToUpdateUser = (id: number) => {
+    this.router.navigateByUrl(`/api-example/updateUser/${id}`);
   };
 
   exempleInterface = `

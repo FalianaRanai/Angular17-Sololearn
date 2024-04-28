@@ -7,6 +7,7 @@ import { ApiExampleComponent } from './pages/api-example/api-example.component';
 import { ContactsComponent } from './pages/lessons/contacts/contacts.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
 import { NotesComponent } from './pages/notes/notes.component';
+import { API_EXAMPLE_ROUTES } from './routes/api-example.routes';
 import { NOTES_ROUTES } from './routes/notes.routes';
 
 const routes: Routes = [
@@ -43,6 +44,7 @@ const routes: Routes = [
         path: 'api-example',
         title: 'Api Example',
         component: ApiExampleComponent,
+        children: API_EXAMPLE_ROUTES,
       },
     ],
   },

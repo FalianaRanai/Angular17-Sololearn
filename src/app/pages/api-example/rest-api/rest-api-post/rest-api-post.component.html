@@ -1,1 +1,148 @@
-<p>rest-api-post works!</p>
+<div class="py-5">
+  <button class="btn btn-primary py-2 px-3" (click)="goBack()">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 m-auto">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Ajouter un user</h5>
+      </div>
+      <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nom</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Nom..."
+              formControlName="nom"
+            />
+            @if(getFormControl()['nom'].touched || isSubmitted){
+            @if(getFormControl()['nom'].errors?.['required']){
+            <span class="text-danger">Ce champ est obligatoire</span>
+            } }
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Prénom</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Prénom..."
+              formControlName="prenom"
+            />
+            @if(getFormControl()['prenom'].touched || isSubmitted){
+            @if(getFormControl()['prenom'].errors?.['required']){
+            <span class="text-danger">Ce champ est obligatoire</span>
+            } }
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Sexe:</label>
+
+            <select name="" id="" class="form-control" formControlName="sexe">
+              <option value="Homme">Homme</option>
+              <option value="Femme">Femme</option>
+              <option value="Autres">Autres</option>
+            </select>
+
+            @if(getFormControl()['sexe'].touched || isSubmitted){
+            @if(getFormControl()['sexe'].errors?.['required']){
+            <span class="text-danger">Ce champ est obligatoire</span>
+            } }
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Nom d'utilisateur</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Nom d'utilisateur..."
+              formControlName="username"
+            />
+            @if(getFormControl()['username'].touched || isSubmitted){
+            @if(getFormControl()['username'].errors?.['required']){
+            <span class="text-danger">Ce champ est obligatoire</span>
+            } }
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email..."
+              formControlName="email"
+            />
+            @if(getFormControl()['email'].touched || isSubmitted){
+            @if(getFormControl()['email'].errors?.['required']){
+            <span class="text-danger">Ce champ est obligatoire</span>
+            } }
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Mot de passe</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Mot de passe..."
+              formControlName="password"
+            />
+            @if(getFormControl()['password'].touched || isSubmitted){
+            @if(getFormControl()['password'].errors?.['required']){
+            <span class="text-danger">Ce champ est obligatoire</span>
+            } }
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Confirmer mot de passe</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Confirmer mot de passe..."
+              formControlName="confirmPassword"
+            />
+            @if(getFormControl()['confirmPassword'].touched || isSubmitted){
+            @if(getFormControl()['confirmPassword'].errors?.['required']){
+            <span class="text-danger">Ce champ est obligatoire</span>
+            } }
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-end">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="!addUserForm.valid || isLoading"
+            >
+              @if(isLoading){
+              <span
+                class="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              } Valider
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
