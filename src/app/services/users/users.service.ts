@@ -20,9 +20,9 @@ export class UsersService {
   };
 
   getUser(id: string) {
-    return this.http.get(`${this.apiUrl}/user/${id}`).pipe(delay(1000));
+    return this.http.get(`${this.apiUrl}/users/${id}`).pipe(delay(1000));
 
-    return this.http.get(`${this.apiUrl}/user/${id}`);
+    return this.http.get(`${this.apiUrl}/users/${id}`);
   }
 
   addUser(user: User): Observable<User> {

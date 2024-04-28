@@ -111,14 +111,14 @@
       "confirmPassword": "0123456789"
     },
     {
-      "id": "afdf",
-      "nom": "user",
-      "prenom": "user",
-      "username": "user",
-      "sexe": "Autres",
-      "email": "user@email.com",
+      "nom": "test",
+      "prenom": "test",
+      "username": "test",
+      "sexe": "Femme",
+      "email": "test@email.com",
       "password": "0123456789",
-      "confirmPassword": "0123456789"
+      "confirmPassword": "0123456789",
+      "id": "afdf"
     }
   ]
 }
